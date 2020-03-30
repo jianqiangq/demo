@@ -3,7 +3,10 @@ package com.qjq.demo.Controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller // 添加注解的作用，自动识别扫描当前的类作为Spring的Bean去管理。Controller注解 允许这个类接受前端的请求。
+
+@Controller
+// 添加注解的作用，自动识别扫描当前的类作为Spring的Bean去管理。Controller注解 允许这个类接受前端的请求。
+// Controller 注解作用：类作为路由 api 的承受者
 public class IndexController {
 
     @GetMapping("/")
