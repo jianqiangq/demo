@@ -22,6 +22,8 @@
 
 - git commit --amend --no-edit
 
+- git commit --amend -m "message"
+
 - IDEA 小技巧：按住 Option 键，鼠标下拉，可以在多行同时编辑。
 
 - github oAuth apps 
@@ -36,7 +38,7 @@
 
 - command + shift + F12 -> Project Structure 隐藏/显示
 
-- command + n -> 类添加 get 和 set 方法
+- command + n -> 类添加 get 和 set 方法, toString 等各种方法
 
 - command + shift + o -> 查找文件
 
@@ -72,3 +74,27 @@ String token = string.split("&")[0].split("=")[1];
 
 - command + e -> 切换到最近编辑的窗口
 
+
+## http 知识点 -> Session Cookie
+
+- Session 相当于银行账户，去银行开户后，银行的系统里面就会保留你的信息，你的所有信息就会在银行的数据库里面或者服务里面。
+
+- Cookie 相当于银行卡，每次取钱的时候，把你的银行卡拿来我才知道你的账户是什么，才能去操作银行账号里面的余额。
+
+我们的服务器就相当于银行，本身 http 是无状态的，如何让服务器记录你的状态呢，每次携带一张银行卡来就好了。
+
+Cookie 是不能跨域的，Application -> Cookies 中的每一条记录（Cookie）都有一个域名（Domain），有一个路径，还有一个过期时间。
+
+Cookie 的 Name 相当于银行卡卡号，Value 相当于卡号对应的唯一标识。渲染网页的时候，每次一个请求从浏览器端发送到服务器端的时候，Network -> XHR 中每一条记录就是前端发送到服务器的请求。
+
+Cookie 和 Session 的过程：为什么登陆成功后，再请求网页为什么知道你已经登陆成功了，因为每次请求前端把 Session 中的 Cookie 带着回传到服务器端。服务器端就会拿到 Cookie，去数据库/缓存/内存中找到
+对应的 Session，就是你的银行账户，查到你的信息，再返回渲染到页面。
+
+## h2 数据库用户名密码错误
+
+jump to console -> 执行：
+
+```sql
+create user if not exists sa password '123'
+alter user sa admin true;
+```

@@ -46,7 +46,7 @@ public class GithubProvider {
             String string = response.body().string();
             // json string 对象，自动转换解析为 Java 类对象
             GithubUser githubUser = JSON.parseObject(string, GithubUser.class);
-            return  githubUser;
+            return githubUser;
         } catch (IOException e) {
             return null;
         }
