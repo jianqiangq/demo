@@ -4,8 +4,12 @@
 
 [Spring 文档](https://spring.io/guides)
 
+[Spring boot](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle)
+
 [Spring Web](https://spring.io/guides/gs/serving-web-content/)
-  
+
+[thymeleaf](https://www.thymeleaf.org/)  
+
 [Bootstrap](https://v3.bootcss.com/gettign-started)
 
 [es](https://elasticsearch.cn/explore)
@@ -98,3 +102,9 @@ jump to console -> 执行：
 create user if not exists sa password '123'
 alter user sa admin true;
 ```
+
+## 热部署
+
+[Spring boot](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#using-boot-devtools)
+
+配置 `compiler.automake.allow.when.app.running` -> command + option + shift + ?
