@@ -31,6 +31,7 @@
             </form>
 
             <ul class="nav navbar-nav navbar-right">
+                <!-- 通过 thymeleaf 模版获取 session 中的 user -->
                 <li th:if="${session.user != null}">
                     <a href="/publish">发布</a>
                 </li>
