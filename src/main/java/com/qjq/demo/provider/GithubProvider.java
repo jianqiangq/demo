@@ -16,7 +16,6 @@ public class GithubProvider {
     public String getAccessToken(AccessTokenDTO accessTokenDTO) {
 
         // Post to a Server
-
         MediaType mediaType = MediaType.get("application/json; charset=utf-8");
         OkHttpClient client = new OkHttpClient();
 

@@ -15,7 +15,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-public class PublicController {
+public class PublishController {
 
     @Autowired
     private QuestionMapper questionMapper;

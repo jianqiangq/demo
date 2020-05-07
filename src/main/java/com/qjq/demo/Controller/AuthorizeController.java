@@ -23,7 +23,7 @@ public class AuthorizeController {
     private GithubProvider githubProvider;
 
     @Autowired
-    private UserMapper UserMapper;
+    private UserMapper userMapper;
 
     // @Value 注解作用：会去配置文件中读取github.client.id，然后赋值到变量里面
     @Value("${github.client.id}")
@@ -61,7 +61,7 @@ public class AuthorizeController {
             user.setGmtCreate(System.currentTimeMillis());
             user.setGmtModified(System.currentTimeMillis());
             user.setAvatarUrl(githubUser.getAvatarUrl());
-            UserMapper.insert(user);
+            userMapper.insert(user);
 
             response.addCookie(new Cookie("token", token));
 
